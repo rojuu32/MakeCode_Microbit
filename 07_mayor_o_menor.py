@@ -1,0 +1,18 @@
+#Practica 7
+#Realiza un programa que muestre un sms, si la persona
+#es mayor o menor de edad , usando numero la azar y el
+#boton A, en el lenguaje python
+
+edad=0
+def on_button_pressed_b():
+    global edad 
+    edad=randint(1, 30)
+    basic.show_number(edad)
+    basic.pause(1000)
+    if edad >= 18:
+        basic.show_string("MAYOR DE EDAD")
+    else:
+        basic.show_string("MENOR DE EDAD")
+        basic.pause(500)
+        basic.clear_screen()   
+input.on_button_pressed(Button.B, on_button_pressed_b)
