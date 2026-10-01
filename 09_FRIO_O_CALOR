@@ -1,0 +1,19 @@
+#Practica
+#Realize un programa que simule un medidor de temperatura
+#usando numeros al azar el boton A, en el lenguaje python
+#si temperatura <= 15 muestre un sms de: "FRIO" , o sino un
+#sms de: "CALOR"
+
+temperatura=0
+def on_button_pressed_a():
+    global temperatura
+    temperatura=randint(1, 40)
+    basic.show_number(temperatura)
+    basic.pause(1000)
+    if temperatura <= 15:
+        basic.show_string("FRIO")
+    else:
+        basic.show_string("CALOR")
+        basic.pause(500)
+        basic.clear_screen()
+input.on_button_pressed(Button.A, on_button_pressed_a)
