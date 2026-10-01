@@ -1,0 +1,17 @@
+#practica 14
+#Realiza un programa que simule un contador de numeros
+#del 1 al 5, usando WHILE y el boton A, en el lenguaje python
+
+def on_button_pressend_a():
+
+ i=5
+ while i>=1:
+     basic.show_number(i)
+     basic.pause(500)
+     i = i-1
+ basic.show_string("FINAL")
+ basic.pause(500)
+ basic.clear_screen()
+ 
+
+input.on_button_pressed(Button.A, on_button_pressend_a)
